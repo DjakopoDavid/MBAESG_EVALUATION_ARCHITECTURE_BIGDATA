@@ -45,12 +45,17 @@ Développer une application web interactive avec *Streamlit* qui :
 
 3. *Visualisation des 4 KPIs*
 
-   | KPI                                                        | Description                                   | Visualisation    |
-   |------------------------------------------------------------|-----------------------------------------------|------------------|
-   | Moyenne des notes par qualité d’alimentation               | Influence de l’alimentation sur les résultats | Bar Chart        |
-   | Heures sur les réseaux sociaux vs Exam Score               | Impact du temps passé en ligne                | Scatter Plot     |
-   | Taux de participation aux activités extrascolaires         | Engagement social des étudiants               | Pie Chart        |
-   | Répartition des notes par genre                            | Comparaison hommes/femmes                     | Boxplot          |
+ *Score moyen par niveau d'éducation parentale*  | Évaluer l'influence du niveau scolaire des parents sur les résultats | Bar Chart       |
+| *Corrélation : Heures d'étude vs Score*         | Analyser si plus d'heures d’étude influencent les notes obtenues     | Scatter Plot    |
+| *Score moyen par qualité de régime alimentaire* | Voir l’impact de l’alimentation sur la performance académique        | Bar Chart       |
+| *Impact des activités extrascolaires*           | Mesurer l’effet de l'engagement social sur les résultats scolaires   | Pie Chart / Bar |
+
+   | KPI                                                |        Description                                                    |Visualisation    |
+   |----------------------------------------------------|-----------------------------------------------------------------------|-----------------|
+   | Score moyen par niveau d'éducation parentale*      |  Évaluer l'influence du niveau scolaire des parents sur les résultats | BarChart        |
+   | Corrélation : Heures d'étude vs Score*             |Analyser si plus d'heures d’étude influencent les notes obtenues       | ScatterPlot     |
+   | Score moyen par qualité de régime alimentaire*     | Engagement social des étudiants                                       | Pie Chart       |
+   | Impact des activités extrascolaires*               | Mesurer l’effet de l'engagement social sur les résultats scolaires    | Boxplot         |
 
 4. *Filtres dynamiques*  
    - Par genre (gender)
