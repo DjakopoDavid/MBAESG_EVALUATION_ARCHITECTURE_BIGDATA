@@ -45,11 +45,6 @@ Développer une application web interactive avec *Streamlit* qui :
 
 3. *Visualisation des 4 KPIs*
 
- *Score moyen par niveau d'éducation parentale*  | Évaluer l'influence du niveau scolaire des parents sur les résultats | Bar Chart       |
-| *Corrélation : Heures d'étude vs Score*         | Analyser si plus d'heures d’étude influencent les notes obtenues     | Scatter Plot    |
-| *Score moyen par qualité de régime alimentaire* | Voir l’impact de l’alimentation sur la performance académique        | Bar Chart       |
-| *Impact des activités extrascolaires*           | Mesurer l’effet de l'engagement social sur les résultats scolaires   | Pie Chart / Bar |
-
    | KPI                                                |        Description                                                    |Visualisation    |
    |----------------------------------------------------|-----------------------------------------------------------------------|-----------------|
    | Score moyen par niveau d'éducation parentale*      |  Évaluer l'influence du niveau scolaire des parents sur les résultats | BarChart        |
@@ -59,8 +54,8 @@ Développer une application web interactive avec *Streamlit* qui :
 
 4. *Filtres dynamiques*  
    - Par genre (gender)
-   - Par tranche d’heures d’étude ou de réseaux sociaux
-   - Par note (exam_score)
+   - Par job
+   - Par niveau d'étude parental
 
 5. Installation
 Cloner le dépôt :
