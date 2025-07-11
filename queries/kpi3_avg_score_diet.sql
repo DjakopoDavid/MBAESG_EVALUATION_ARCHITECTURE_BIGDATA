@@ -2,7 +2,7 @@ SELECT
     diet_quality,
     AVG(exam_score) AS avg_score
 FROM
-    students
+   etudiants
 {where_clause}
 GROUP BY
     diet_quality

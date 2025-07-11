@@ -2,5 +2,5 @@ SELECT
     study_hours,
     exam_score
 FROM
-    students
+    etudiants
 {where_clause};

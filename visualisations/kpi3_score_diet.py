@@ -4,7 +4,7 @@ import pandas as pd
 def plot_kpi3(con, where_clause):
     query = """
         SELECT diet_quality, AVG(exam_score) AS avg_score
-        FROM students
+        FROM etudiants
         {where_clause}
         GROUP BY diet_quality
         ORDER BY avg_score DESC

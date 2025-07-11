@@ -18,8 +18,8 @@ DATA_PATH = os.path.join("DATA_PROJET", "student_habits_performance.csv")
 def upload_and_store():
     if os.path.exists(DATA_PATH):
         df = pd.read_csv(DATA_PATH)
-        con.execute("DROP TABLE IF EXISTS students")
-        con.execute("CREATE TABLE students AS SELECT * FROM df")
+        con.execute("DROP TABLE IF EXISTS etudiants")
+        con.execute("CREATE TABLE etudiants AS SELECT * FROM df")
         st.success("Données chargées automatiquement depuis DATA_PROJET !")
         return True
     else:
@@ -29,20 +29,20 @@ def upload_and_store():
 def show_filters():
     with st.sidebar:
         st.header("Filtres")
-        genders = con.execute("SELECT DISTINCT gender FROM students").fetchall()
-        jobs = con.execute("SELECT DISTINCT part_time_job FROM students").fetchall()
-        education_levels = con.execute("SELECT DISTINCT parental_education_level FROM students").fetchall()
+        genders = con.execute("SELECT DISTINCT gender FROM etudiants").fetchall()
+        jobs = con.execute("SELECT DISTINCT part_time_job FROM etudiants").fetchall()
+        education_levels = con.execute("SELECT DISTINCT parental_education_level FROM etudiants").fetchall()
 
-        selected_gender = st.selectbox("Genre", [g[0] for g in genders] + ["Tous"])
-        selected_job = st.selectbox("Job étudiant", [j[0] for j in jobs] + ["Tous"])
-        selected_edu = st.selectbox("Éducation des parents", [e[0] for e in education_levels] + ["Tous"])
+        selected_gender = st.selectbox("Genre", [g[0] for g in genders] + ["All"])
+        selected_job = st.selectbox("Job etudiant", [j[0] for j in jobs] + ["All"])
+        selected_edu = st.selectbox("parental education level", [e[0] for e in education_levels] + ["All"])
 
     filters = []
-    if selected_gender != "Tous":
+    if selected_gender != "All":
         filters.append(f"gender = '{selected_gender}'")
-    if selected_job != "Tous":
+    if selected_job != "All":
         filters.append(f"part_time_job = '{selected_job}'")
-    if selected_edu != "Tous":
+    if selected_edu != "All":
         filters.append(f"parental_education_level = '{selected_edu}'")
 
     where_clause = " AND ".join(filters)

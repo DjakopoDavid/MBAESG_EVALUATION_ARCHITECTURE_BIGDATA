@@ -1,10 +1,10 @@
 SELECT
-    extracurricular_activities,
+    extracurricular_participation,
     AVG(exam_score) AS avg_score
 FROM
-    students
+    etudiants
 {where_clause}
 GROUP BY
-    extracurricular_activities
+    extracurricular_participation
 ORDER BY
     avg_score DESC;
